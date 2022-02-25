@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>星宿测试</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no">
+        <link rel="shortcut icon" href="/img/logo.gif" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/css/index.css" >
+        <script src="/js/html2canvas.js"></script>
+    </head>
+    <body>
+        <!-- 加载中最上层遮罩 -->
+        <div id="loading">
+            <img id="logo" src="/img/logo.gif" alt="loading-logo">
+        </div>
+        <div id="mask"></div>
+
+        <!-- 背景音乐控制模块 -->
+        <div class="Music mesh--muc play" id="js-music-ctl">
+            <div class="icon mesh--mui"></div>
+            <div class="stop mesh--mus"></div>
+        </div> 
+
+        <!-- 视觉中心窗户部分 -->
+        <div>
+            <div id="middle-view">
+                <div style="position: relative;">
+                    <img src="/img/ck.png" alt="ck">
+                    <div id="win-L" class="win-move-left-hidden"><img src="/img/ch.png" alt="lch"></div>
+                    <div id="win-R" class="win-move-right-hidden"><img src="/img/ch.png" alt="rch"></div>
+                </div>
+                <div style="position: relative;">
+                    <img style="margin-top: -0.05rem;" src="/img/wall.png" alt="wall">
+                </div>
+            </div>
+            <div id="open-window">打<br/>开<br/>窗<br/>户<br/>迎<br/>接<br/>你<br/>的<br/>星<br/>宿<br/>吧</div>
+            <div id="subject">
+                <span id="que">听一段音乐，<br/>你脑海中浮现了哪种景象?</span>
+                <!-- 答案选项 -->
+                <table class="option">
+                    <tbody>
+                        <tr>
+                            <td class="option-left option-top option-1">A.<span id="option-1-A">夕阳西下</span></td>
+                            <td class="option-right option-top option-1">B.<span id="option-1-B">清泉涓涓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="option-left option-bottom option-1">C.<span id="option-1-C">雪夜山林</span></td>
+                            <td class="option-right option-bottom option-1">D.<span id="option-1-D">蓝天白鸽</span></td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <!-- 背景/天空 -->
+        <div class="bg" id="bg-sky-1">
+            <img src="/img/background-zipped/bg1.jpg" alt="sky-1">
+        </div>
+        <div class="bg" id="bg-sky-2">
+            <img src="/img/background-zipped/bg2.jpg" alt="sky-2">
+        </div>
+        <div class="bg" id="bg-sky-3">
+            <img src="/img/background-zipped/bg3.jpg" alt="sky-3">
+        </div>
+        <div class="bg" id="bg-sky-4">
+            <img src="/img/background-zipped/bg4.jpg" alt="sky-4">
+        </div>
+        <div class="bg" id="bg-sky-5">
+            <img src="/img/background-zipped/bg5.jpg" alt="sky-5">
+        </div>
+
+        <!-- 星宿图 -->
+        <div class="bg" id='constellation-img'></div>
+        
+        <!-- 结果显示模块 -->
+        <div class="id-pic" id="id-pic-2">
+            <div id="main-pic" style="background-image: url('/img/con-img-zipped/p02.jpg');" ><div id="con-name">亢金龙</div></div>
+            <div id="introduce"> 金出生于传统的炼金世家，他的父母给予他厚望，给他取名为金。
+                金自幼就在父母的培养下悉心钻研炼金术，他极具天赋，掌握了一套属于自己的方法，
+                然而人们渐渐发现他的炼金术更近乎于一种仙术。有一天他突然纵身跃入面前的火炉，
+                须臾，一条金龙腾空而起，冲上云霄，昔日痴狂的炼金术士已然成为东方天空的神明。</div>
+            <div id="identity">
+                <div id="profile-photo"></div>
+                <div id='id-introduce'>你的学习和工作时常要求你拥有聪明的头脑和果敢的决断能力，
+                恰好你在这方面的能力可以让你游刃有余。但是在人际交往这方面你还需要注意
+                多倾听他人的声音。</div>
+            </div>
+            <div style="position: absolute; bottom: 2.5%; left: 7.5%; font-size: 1rem; width: 50%;">长按扫码&nbsp;&nbsp;查看你的星宿寄语</div>
+        </div>
+        
+        <div class="id-pic" id="id-pic-blank">
+            <div class="button" id="save-button">长按图片保存结果</div>
+            <div class="button bubbly-button" id="again-button">再测一次</div>
+        </div>
+        <a id="download" href="" download="downImg"></a>
+
+        <div class="button bubbly-button" id="creat-button">点击生成星宿寄语</div>
+
+
+        <!-- 音乐模块 -->
+        <audio id="js-bg-music" src="/music/bgmusic.mp3" loop="loop" data-user-paused="false" preload="auto"></audio>
+        <audio id="js-que-music" src="/music/que-1.mp3" loop="loop" data-user-paused="false" preload="auto"></audio>
+
+
+        <script src="/js/index.js" type="text/javascript"></script>
+    </body>
+</html>
