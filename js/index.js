@@ -9,6 +9,8 @@ var mask = function(){
 window.onload = function(){
     document.getElementById('loading').classList.add("loading-end");
     document.getElementById('js-bg-music').classList.add('play');
+    //chome内 第一次音乐播放需要用户操作点击之后才能发生
+    //待修复
     document.getElementById('js-bg-music').play();
     mask();
 };
