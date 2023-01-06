@@ -1,3 +1,4 @@
+//加载
 var mask = function(){
   html2canvas(document.getElementById("middle-view"),{useCORS:true}).then(function(canvas) {
     var img =  document.createElement("img");
